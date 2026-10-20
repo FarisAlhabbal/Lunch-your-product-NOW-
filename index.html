@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tidepool Mug | Ceramic mug that keeps coffee hot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="#top" class="logo">Tidepool</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav id="menu">
+      <a href="#features">Features</a>
+      <a href="#buy">Buy</a>
+      <a href="#contact">Contact</a>
+      <span class="cart">Cart: <strong id="cartCount">0</strong></span>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>The mug that keeps your coffee hot for two hours.</h1>
+        <p>Double-wall ceramic, hand-glazed, and sized to fit under any coffee machine.</p>
+        <a href="#buy" class="btn">Buy for $24</a>
+      </div>
+      <div class="mug-wrap">
+        <div class="mug" id="mug">
+          <div class="mug-body"></div>
+          <div class="mug-handle"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Why people keep it on their desk</h2>
+      <div class="grid">
+        <article>
+          <h3>Stays hot</h3>
+          <p>The air gap between two ceramic walls holds heat for up to two hours.</p>
+        </article>
+        <article>
+          <h3>Cool to hold</h3>
+          <p>The outer wall stays comfortable, even with a fresh pour.</p>
+        </article>
+        <article>
+          <h3>Dishwasher safe</h3>
+          <p>The glaze is fired twice, so it will not fade or chip easily.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="buy" class="buy">
+      <h2>Pick your color</h2>
+      <div class="swatches" id="swatches">
+        <button class="swatch active" data-color="#1F6F78" data-name="Teal" style="--c:#1F6F78" aria-label="Teal"></button>
+        <button class="swatch" data-color="#F2B632" data-name="Sun" style="--c:#F2B632" aria-label="Sun"></button>
+        <button class="swatch" data-color="#D9534F" data-name="Coral" style="--c:#D9534F" aria-label="Coral"></button>
+        <button class="swatch" data-color="#2B2D42" data-name="Night" style="--c:#2B2D42" aria-label="Night"></button>
+      </div>
+      <p>Selected: <strong id="colorName">Teal</strong></p>
+
+      <div class="qty">
+        <button id="minus" aria-label="Decrease quantity">-</button>
+        <span id="qty">1</span>
+        <button id="plus" aria-label="Increase quantity">+</button>
+      </div>
+      <p class="total">Total: $<span id="total">24</span></p>
+      <button class="btn" id="addBtn">Add to cart</button>
+      <p class="msg" id="cartMsg" role="status"></p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Questions? Send us a message</h2>
+      <form id="form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" type="text" required>
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" required></textarea>
+        <p class="msg" id="formMsg" role="status"></p>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Tidepool. A training project built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
